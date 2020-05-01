@@ -1,0 +1,127 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    background-color: #ADBDA3;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 0px;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-style: italic;   
+    margin-top: 0.125rem;
+}
+
+#survey-form {
+    padding: 2rem;
+    background-color: #144954;
+    border-radius: 10px;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/*all input type but not radio and checkbok*/
+input:not([type="radio"]):not([type="checkbox"]), textarea, select {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-family: 'Noto Sans', sans-serif; 
+    font-size: 0.9rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 0.625rem;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    transform: scale(1.5);
+    margin-right: 0.625rem;
+}
+
+select, textarea {
+    font-size: 0.9rem;
+}
+
+label[for="dropdown"], label[for="comments"] {
+    margin-top: 0.625rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 80%;
+    }
+}
+
+@media (max-width: 425px) {
+    main {
+        width: 90%;
+    }
+
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 375px) {
+    html {
+        font-size: 10px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    body {
+        background-color: #144954;
+        color: #fff;
+    }
+
+    .heading {
+        margin-bottom: 0px;
+    }
+
+    #survey-form {
+        margin-top: -20px;
+    }
+}
