@@ -14,8 +14,12 @@ body {
 }
 
 main {
-    width: 70%;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+}
+
+main > * {
+    grid-column: 2;
 }
 
 .heading {
@@ -23,8 +27,8 @@ main {
 }
 
 .title {
-    font-size: 2rem;
     margin-bottom: 0px;
+    font-size: 2rem;
 }
 
 .description {
@@ -36,7 +40,6 @@ main {
 #survey-form {
     padding: 2rem;
     background-color: #144954;
-    border-radius: 10px;
     color: #fff;
 }
 
@@ -84,44 +87,35 @@ select, textarea {
 }
 
 label[for="dropdown"], label[for="comments"] {
-    margin-top: 0.625rem;
+    margin-top: 1.25rem;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 840px) {
     main {
-        width: 80%;
+        display: grid;
+        grid-template-columns: 100px 1fr 100px;
     }
 }
 
-@media (max-width: 425px) {
-    main {
-        width: 90%;
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
     }
+}
 
+@media screen and (max-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: 50px 1fr 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
     html {
         font-size: 12px;
     }
-}
-
-@media (max-width: 375px) {
-    html {
-        font-size: 10px;
-    }
-
-    main {
-        width: 100%;
-    }
-
-    body {
-        background-color: #144954;
-        color: #fff;
-    }
-
-    .heading {
-        margin-bottom: 0px;
-    }
-
-    #survey-form {
-        margin-top: -20px;
+    
+    main > * {
+        grid-column: 1 / -1;
     }
 }
