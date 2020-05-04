@@ -118,4 +118,9 @@ label[for="dropdown"], label[for="comments"] {
     main > * {
         grid-column: 1 / -1;
     }
+
+    input[type="checkbox"], input[type="radio"] {
+        transform: scale(1);
+        margin-right: 0.625rem;
+    }
 }
