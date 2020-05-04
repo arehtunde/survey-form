@@ -120,7 +120,7 @@ label[for="dropdown"], label[for="comments"] {
     }
 
     input[type="checkbox"], input[type="radio"] {
-        transform: scale(1);
+        transform: scale(1.2);
         margin-right: 0.625rem;
     }
 }
